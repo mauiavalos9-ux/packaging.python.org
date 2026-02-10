@@ -157,10 +157,16 @@ the `native namespace package example project`_.
 Legacy namespace packages
 -------------------------
 
+.. warning::
+
+    The information in this section is obsolete and is no longer functional
+    (as of Setuptools 82.0.0). It is only retained for historical reference.
+
+    ``pkg_resources`` has been deprecated and was fully removed in Setuptools 82.0.0.
+
 These two methods, that were used to create namespace packages prior to :pep:`420`,
 are now considered to be obsolete and should not be used unless you need compatibility
-with packages already using this method. Also, ``pkg_resources`` has been deprecated
-(and is fully removed in setuptools 82.0.0).
+with packages already using this method.
 
 To migrate an existing package, all packages sharing the namespace must be migrated simultaneously.
 
@@ -216,7 +222,7 @@ in the `pkgutil namespace example project`_.
 pkg_resources-style namespace packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:doc:`Setuptools <setuptools:index>` provides the `pkg_resources.declare_namespace`_ function and
+:doc:`Setuptools <setuptools:index>` previously provided the ``pkg_resources.declare_namespace`` function and
 the ``namespace_packages`` argument to :func:`~setuptools.setup`. Together
 these can be used to declare namespace packages. While this approach is no
 longer recommended, it is widely present in most existing namespace packages.
@@ -285,7 +291,5 @@ to :func:`~setuptools.setup` in :file:`setup.py`. For example:
 A complete working example of two pkg_resources-style namespace packages can be found
 in the `pkg_resources namespace example project`_.
 
-.. _pkg_resources.declare_namespace:
-    https://setuptools.readthedocs.io/en/latest/pkg_resources.html#namespace-package-support
 .. _pkg_resources namespace example project:
     https://github.com/pypa/sample-namespace-packages/tree/master/pkg_resources
